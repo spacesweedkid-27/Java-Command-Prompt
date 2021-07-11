@@ -2,7 +2,7 @@
 You want to use a CMD in Java?
 Here you go!
 
-#Help
+# Help
 H or HELP:              Displays this message
 C or COMMAND:           Use a windows command located in System32
 P or PROGRAM FILES      Use a command located in Program Files
