@@ -1,10 +1,28 @@
 package lib;
 
-import util.IllegalArgumentException;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+class IllegalArgumentException extends Exception {
+    public IllegalArgumentException() {
+        super();
+    }
+
+    public IllegalArgumentException(String message) {
+        super(message);
+    }
+
+    public IllegalArgumentException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public IllegalArgumentException(Throwable cause) {
+        super(cause);
+    }
+}
 
 public class JCMD {
 
