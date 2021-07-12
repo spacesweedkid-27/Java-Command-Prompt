@@ -5,9 +5,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class IllegalArgumentException extends Exception {
+class IllegalCommandException extends Exception {
 
-	public IllegalArgumentException(String message) {
+	public IllegalCommandException(String message) {
 		super("Programm " + message + " does not exist");
 	}
 
@@ -15,7 +15,7 @@ class IllegalArgumentException extends Exception {
 
 public class JCMD {
 
-	public static void execute(String command) {
+	public static void execute(String command, String args) {
 		try {
 
 			String path = null;
@@ -31,14 +31,14 @@ public class JCMD {
 				path = f86.getAbsolutePath();
 
 			if (path == null) {
-				throw new IllegalArgumentException(command);
+				throw new IllegalCommandException(command);
 			} else {
-			run(path);
+			run(path + " " + args);
 			}
 				
 		} catch (IOException e) {
 			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
+		} catch (IllegalCommandException e) {
 			e.printStackTrace();
 		}
 	}
