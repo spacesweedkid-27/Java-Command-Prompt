@@ -32,9 +32,10 @@ public class JCMD {
 
 			if (path == null) {
 				throw new IllegalArgumentException(command);
-			}
+			} else {
 			run(path);
-
+			}
+				
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (IllegalArgumentException e) {
